@@ -46,10 +46,6 @@ Das Plugin wurde mit Java programmiert in IntelliJ.
 
 Das Plugin auf den Server ziehen, die Datenbank in der Config eintragen, und gelegentlich andere Sachen einstellen, Server neustarten und viel Spaß mit dem Plugin.
 
-### Creating A Pull Request
-
-
-
 ## Lizenz
 
 Distributed under the MIT License. See [LICENSE](https://github.com/Fedox-die-Ente/AstralNetwork-EloSystem/blob/main/LICENSE.md) for more information.
