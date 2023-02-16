@@ -12,13 +12,13 @@ import java.util.HashMap;
 import java.util.List;
 
 public enum PreDefinedItem {
-    reset("&cReset", Material.LEVER, new String[] {"&7The next elo reset is in &5%resetdays% &7days."}, 0, 5),
-    unranked("&aUnranked %yours%", Material.LEATHER_CHESTPLATE, new String[] {"§7§oFrom §50 §7to §5250"}, 0, 29),
-    bronze("&aBronze %yours%", Material.LEATHER_CHESTPLATE, new String[] {"§7§oFrom §250 §7to §5500"}, 0, 30),
-    silver("&aSilver %yours%", Material.LEATHER_CHESTPLATE, new String[] {"§7§oFrom §500 §7to §5750"}, 0, 31),
-    crystal("&aCrystal %yours%", Material.LEATHER_CHESTPLATE, new String[] {"§7§oFrom §7750 §7to §51000"}, 0, 32),
-    champ("&aChamp %yours%", Material.LEATHER_CHESTPLATE, new String[] {"§7§oMAX RANK"}, 0, 33),
-    collect("&eGet your reward", Material.SUNFLOWER, new String[] {"&Get %myreward% Coins.","&7§oClick here"}, 0, 3),
+    reset("&5Reset", Material.LEVER, new String[] {"&7The next elo reset is in &5%resetdays% &7days."}, 0, 5),
+    unranked("&dUnranked %yours%", Material.LEATHER_CHESTPLATE, new String[] {"§7§oFrom §50 §7to §5250"}, 0, 29),
+    bronze("&dBronze %yours%", Material.LEATHER_CHESTPLATE, new String[] {"§7§oFrom §2250 §7to §5500"}, 0, 30),
+    silver("&dSilver %yours%", Material.LEATHER_CHESTPLATE, new String[] {"§7§oFrom §5500 §7to §5750"}, 0, 31),
+    crystal("&dCrystal %yours%", Material.LEATHER_CHESTPLATE, new String[] {"§7§oFrom §5750 §7to §51000"}, 0, 32),
+    champ("&dChamp %yours%", Material.LEATHER_CHESTPLATE, new String[] {"§7§oMAX RANK"}, 0, 33),
+    collect("&dGet your reward", Material.SUNFLOWER, new String[] {"&Get %myreward% Coins.","&7§oClick here"}, 0, 3),
     collectnotavailable("&cYou can get your money tomorrow again", Material.SUNFLOWER, new String[] {"&7&oWaiting.."}, 0, 3);
 
     private int sloot;
