@@ -1,0 +1,12 @@
+name: AstralEloAPI
+version: '${project.version}'
+main: eu.astralnetwork.astraleloapi.AstralEloAPI
+api-version: 1.19
+depend: [ Vault ]
+authors: [ Fedox ]
+description: elo api
+website: astral-network.eu
+
+commands:
+  elo:
+  elomanager:
