@@ -8,16 +8,6 @@
 
   <p align="center">
     Ein wunderschönes Elo System für den Astral Network Minecraft Server.
-    <br/>
-    <br/>
-    <a href="https://github.com/Fedox-die-Ente/AstralNetwork-EloSystem"><strong>Explore the docs »</strong></a>
-    <br/>
-    <br/>
-    <a href="https://github.com/Fedox-die-Ente/AstralNetwork-EloSystem">View Demo</a>
-    .
-    <a href="https://github.com/Fedox-die-Ente/AstralNetwork-EloSystem/issues">Report Bug</a>
-    .
-    <a href="https://github.com/Fedox-die-Ente/AstralNetwork-EloSystem/issues">Request Feature</a>
   </p>
 </p>
 
