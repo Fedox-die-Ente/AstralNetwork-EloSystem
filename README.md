@@ -42,4 +42,4 @@ Distributed under the MIT License. See [LICENSE](https://github.com/Fedox-die-En
 
 ## Entwickler
 
-* **Fedox** - *Hobby Entwickler* - [Fedox](https://github.com/Fedox-die-Ente/) - *Elo System*
+* **Fedox** - *Hobby Entwickler* - [Fedox-die-Ente](https://github.com/Fedox-die-Ente/) - *Elo System*
