@@ -42,4 +42,5 @@ Distributed under the MIT License. See [LICENSE](https://github.com/Fedox-die-En
 
 ## Entwickler
 
-* **Fedox** - *Hobby Entwickler* - [Fedox-die-Ente](https://github.com/Fedox-die-Ente/) - *Elo System*
+* **SkyZero.ga** - *Ehemaliger SkyPvP Server* - *Grundstruktur*
+* **Fedox** - *Hobby Entwickler* - [Fedox-die-Ente](https://github.com/Fedox-die-Ente/) - *Umänderung des Systems*
