@@ -7,7 +7,7 @@
   <h3 align="center">Elo System</h3>
 
   <p align="center">
-    Ein wunderschönes Elo System für den Astral Network Minecraft Server.
+    Ein wunderschönes Elo System für SkyPvP Server.
   </p>
 </p>
 
