@@ -2,9 +2,9 @@ package eu.astralnetwork.astraleloapi.commands;
 
 import eu.astralnetwork.astraleloapi.AstralEloAPI;
 import eu.astralnetwork.astraleloapi.EloAPI;
-import eu.astralnetwork.astraleloapi.Eloplayer;
-import eu.astralnetwork.astraleloapi.message.Message;
-import eu.astralnetwork.astraleloapi.util.Utils;
+import eu.astralnetwork.astraleloapi.EloPlayer;
+import eu.astralnetwork.astraleloapi.messages.Message;
+import eu.astralnetwork.astraleloapi.utils.Util;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -52,7 +52,7 @@ public class ManagerCommand implements CommandExecutor {
                 return true;
             }
             p.sendMessage(main.PREFIX + "Elo from:" + args[1]);
-            Eloplayer e = new EloAPI().getEloPlayerByName(args[1]);
+            EloPlayer e = new EloAPI().getEloPlayerByName(args[1]);
             if (e == null) {
                 p.sendMessage(main.PREFIX + "§cThe player name is not registered.");
                 return true;
@@ -67,12 +67,12 @@ public class ManagerCommand implements CommandExecutor {
                 return true;
             }
             p.sendMessage(main.PREFIX + "Manipulate the Elo from:" + args[1]);
-            Eloplayer e = EloAPI.getEloPlayerByName(args[1]);
+            EloPlayer e = EloAPI.getEloPlayerByName(args[1]);
             if (e == null) {
                 p.sendMessage(main.PREFIX + "§cThe player name is not registered.");
                 return true;
             }
-            if (!Utils.isInt(args[2])) {
+            if (!Util.isInt(args[2])) {
                 p.sendMessage(main.PREFIX + "§c" + args[2] + " is not a correct argument!");
                 return true;
             }

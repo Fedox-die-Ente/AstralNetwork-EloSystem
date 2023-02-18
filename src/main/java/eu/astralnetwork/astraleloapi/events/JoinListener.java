@@ -2,9 +2,9 @@ package eu.astralnetwork.astraleloapi.events;
 
 import eu.astralnetwork.astraleloapi.AstralEloAPI;
 import eu.astralnetwork.astraleloapi.EloAPI;
-import eu.astralnetwork.astraleloapi.Eloplayer;
-import eu.astralnetwork.astraleloapi.inventory.InvData;
-import eu.astralnetwork.astraleloapi.inventory.PreDefinedItem;
+import eu.astralnetwork.astraleloapi.EloPlayer;
+import eu.astralnetwork.astraleloapi.inventorys.InvData;
+import eu.astralnetwork.astraleloapi.inventorys.PreDefinedItem;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -14,8 +14,6 @@ import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.event.player.PlayerJoinEvent;
 import me.clip.placeholderapi.PlaceholderAPI;
 import me.clip.placeholderapi.PlaceholderHook;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 public class JoinListener implements Listener {
 
@@ -76,7 +74,7 @@ public class JoinListener implements Listener {
             return;
         Player p = (Player) e.getWhoClicked();
 
-        Eloplayer ep=main.list.get(p.getUniqueId().toString());
+        EloPlayer ep=main.list.get(p.getUniqueId().toString());
 
         if(e.getSlot() == PreDefinedItem.collect.getSlot())
         {

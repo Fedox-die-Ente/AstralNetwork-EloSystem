@@ -1,6 +1,6 @@
 package eu.astralnetwork.astraleloapi;
 
-import eu.astralnetwork.astraleloapi.message.Message;
+import eu.astralnetwork.astraleloapi.messages.Message;
 import org.bukkit.Bukkit;
 
 import java.text.DateFormat;
@@ -9,7 +9,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.UUID;
 
-public class Eloplayer implements Comparable {
+public class EloPlayer implements Comparable {
 
     private Date pickup;
     private int elo;
@@ -18,7 +18,7 @@ public class Eloplayer implements Comparable {
     private Rank rank = null;
 
     // Create
-    public Eloplayer(String uuid, String name) {
+    public EloPlayer(String uuid, String name) {
         this.uuid = uuid;
         this.elo = AstralEloAPI.getInstance().startelo;
         this.name = name;
@@ -35,7 +35,7 @@ public class Eloplayer implements Comparable {
     }
 
     // Loading
-    public Eloplayer(String uuid, String name, int elo, String pickup) {
+    public EloPlayer(String uuid, String name, int elo, String pickup) {
         this.uuid = uuid;
         this.elo = elo;
         this.name = name;
@@ -99,7 +99,7 @@ public class Eloplayer implements Comparable {
 
     @Override
     public int compareTo(Object compare) {
-        int c_elo=((Eloplayer)compare).getElo();
+        int c_elo=((EloPlayer)compare).getElo();
         return this.getElo()-c_elo;
     }
 
@@ -112,14 +112,14 @@ public class Eloplayer implements Comparable {
         this.update();
     }
 
-    public void takeEloFromOther(Eloplayer t, int ammount) {
+    public void takeEloFromOther(EloPlayer t, int ammount) {
         if(t.elo<AstralEloAPI.getInstance().littleelo_min)
             ammount=AstralEloAPI.getInstance().littleelo_action;
         t.removeElo(ammount);
         this.addElo(ammount);
     }
 
-    public void giveEloToOther(Eloplayer t, int ammount) {
+    public void giveEloToOther(EloPlayer t, int ammount) {
         if(this.elo<AstralEloAPI.getInstance().littleelo_min)
             ammount=AstralEloAPI.getInstance().littleelo_action;
         this.removeElo(ammount);

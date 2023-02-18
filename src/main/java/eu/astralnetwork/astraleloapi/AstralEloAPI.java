@@ -4,11 +4,11 @@ import eu.astralnetwork.astraleloapi.commands.MainCommand;
 import eu.astralnetwork.astraleloapi.commands.ManagerCommand;
 import eu.astralnetwork.astraleloapi.database.MySQL;
 import eu.astralnetwork.astraleloapi.events.JoinListener;
-import eu.astralnetwork.astraleloapi.inventory.InvData;
-import eu.astralnetwork.astraleloapi.inventory.InventorydataConfigurator;
-import eu.astralnetwork.astraleloapi.inventory.PreDefinedItem;
-import eu.astralnetwork.astraleloapi.message.MessageConfigurator;
-import eu.astralnetwork.astraleloapi.util.Utils;
+import eu.astralnetwork.astraleloapi.inventorys.InvData;
+import eu.astralnetwork.astraleloapi.inventorys.InventorydataConfigurator;
+import eu.astralnetwork.astraleloapi.inventorys.PreDefinedItem;
+import eu.astralnetwork.astraleloapi.messages.MessageConfigurator;
+import eu.astralnetwork.astraleloapi.utils.Util;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -31,8 +31,8 @@ public final class AstralEloAPI extends JavaPlugin {
     private static EloAPI ELOAPI;
     private static AstralEloAPI MAIN;
     public static String PREFIX = "&5Astral: &7";
-    public HashMap<String, Eloplayer> list = new HashMap<>();
-    public ArrayList<Eloplayer> orderedlist = new ArrayList<>();
+    public HashMap<String, EloPlayer> list = new HashMap<>();
+    public ArrayList<EloPlayer> orderedlist = new ArrayList<>();
     public ArrayList<Rank> elos = new ArrayList<>();
     public int littleelo_min = 20;
     public int littleelo_action = 2;
@@ -83,7 +83,7 @@ public final class AstralEloAPI extends JavaPlugin {
 
     public void reset() {
         DateFormat df = new SimpleDateFormat("dd.MM.yyyy");
-        for(Eloplayer a : list.values()) {
+        for(EloPlayer a : list.values()) {
             a.setElo((int) Math.round(a.getElo() * (eloreset_percent / 100.00)));
         }
         this.lastReset = new Date();
@@ -200,7 +200,7 @@ public final class AstralEloAPI extends JavaPlugin {
     }
 
     public void newPlayer(Player p) {
-        Eloplayer ep = new Eloplayer(p.getUniqueId().toString(), p.getName());
+        EloPlayer ep = new EloPlayer(p.getUniqueId().toString(), p.getName());
         this.list.put(p.getUniqueId().toString(), ep);
         this.orderedlist.add(ep);
     }
@@ -219,7 +219,7 @@ public final class AstralEloAPI extends JavaPlugin {
         {
             while (rs.next())
             {
-                Eloplayer ep = new Eloplayer(rs.getString("UUID"), rs.getString("NAME"), rs.getInt("ELO"), rs.getString("PICKUP"));
+                EloPlayer ep = new EloPlayer(rs.getString("UUID"), rs.getString("NAME"), rs.getInt("ELO"), rs.getString("PICKUP"));
                 this.list.put(rs.getString("UUID"), ep);
                 this.orderedlist.add(ep);
             }
@@ -233,9 +233,9 @@ public final class AstralEloAPI extends JavaPlugin {
     public Inventory getInventory(Player p)
     {
         Inventory inv = Bukkit.createInventory(null, InvData.mainmenu.getSlots(), InvData.mainmenu.getTitle());
-        inv = Utils.invFrame(inv);
+        inv = Util.invFrame(inv);
 
-        Eloplayer ep = list.get(p.getUniqueId().toString());
+        EloPlayer ep = list.get(p.getUniqueId().toString());
         Rank act = ep.getRank();
 
         HashMap<String, String> rep = new HashMap<>();

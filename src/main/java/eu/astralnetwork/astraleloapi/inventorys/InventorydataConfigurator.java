@@ -1,4 +1,4 @@
-package eu.astralnetwork.astraleloapi.inventory;
+package eu.astralnetwork.astraleloapi.inventorys;
 
 import eu.astralnetwork.astraleloapi.AstralEloAPI;
 import org.bukkit.Bukkit;

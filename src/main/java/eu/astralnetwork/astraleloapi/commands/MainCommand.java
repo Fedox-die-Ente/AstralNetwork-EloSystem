@@ -1,7 +1,7 @@
 package eu.astralnetwork.astraleloapi.commands;
 
 import eu.astralnetwork.astraleloapi.AstralEloAPI;
-import eu.astralnetwork.astraleloapi.message.Message;
+import eu.astralnetwork.astraleloapi.messages.Message;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -25,9 +25,6 @@ public class MainCommand implements CommandExecutor
             return true;
         }
         Player p = (Player)sender;
-
-        //p.sendMessage(Message.yourelo.getMessage());
-        //p.sendMessage(Message.yourelodata.getMessage().replaceAll("%elo%", new EloAPI().getEloPlayerByPlayer(p).getElo()+"").replaceAll("%rank%",new EloAPI().getEloPlayerByPlayer(p).getRank().getOutputTitle()));
 
         p.openInventory(main.getInventory(p));
 

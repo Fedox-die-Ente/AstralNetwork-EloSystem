@@ -1,4 +1,4 @@
-package eu.astralnetwork.astraleloapi.util;
+package eu.astralnetwork.astraleloapi.utils;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-public class Utils {
+public class Util {
     public static String hiddenString(String s) {
         String hidden = "";
         for (char c : s.toCharArray()) hidden += ChatColor.COLOR_CHAR+""+c;

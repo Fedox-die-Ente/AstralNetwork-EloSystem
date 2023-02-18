@@ -1,4 +1,4 @@
-package eu.astralnetwork.astraleloapi.message;
+package eu.astralnetwork.astraleloapi.messages;
 
 import eu.astralnetwork.astraleloapi.AstralEloAPI;
 import org.bukkit.ChatColor;

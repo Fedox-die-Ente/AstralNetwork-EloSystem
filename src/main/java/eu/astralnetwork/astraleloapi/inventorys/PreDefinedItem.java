@@ -1,4 +1,4 @@
-package eu.astralnetwork.astraleloapi.inventory;
+package eu.astralnetwork.astraleloapi.inventorys;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
